@@ -6,15 +6,11 @@ Aplicación en Streamlit para registrar template (Check-in) y RPE/UA (Check-out)
 
 ```
 app.py
-src/
-  auth.py
-  io_files.py
-  schema.py
-  ui_components.py
 data/
-  jugadoras.xlsx        # (sube aquí tu archivo con columnas: id_jugadora, nombre_jugadora)
-  partes_cuerpo.xlsx    # (sube aquí tu archivo con columna: parte)
-  registros.jsonl       # se crea automáticamente (JSON Lines)
+modules/
+pages/
+test/
+
 requirements.txt
 README.md
 ```
@@ -134,7 +130,7 @@ ruff check . --select F401 --fix
 - Configuración de remoto
 
 ```bash
-git remote add upstream https://github.com/lucbra21/CheckInOut.git
+git remote add upstream https://github.com/devlogrono/dux_template.git
 git remote -v
 ```
 
