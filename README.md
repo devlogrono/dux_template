@@ -1,6 +1,6 @@
 # Template App
 
-Aplicación en Streamlit para registrar template (Check-in) y RPE/UA (Check-out) por jugadora.
+Aplicación en Streamlit (Template).
 
 ## Estructura
 
