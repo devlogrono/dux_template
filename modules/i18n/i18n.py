@@ -4,7 +4,7 @@ from pathlib import Path
 
 _LANG_DIR = Path(__file__).parent / "lang"
 
-#@st.cache_resource
+#@st.cache_resource(show_spinner=False)
 def _load_lang(lang: str) -> dict:
     """Carga el archivo de idioma (lang/en.json, lang/pt.json, etc.)."""
     path = _LANG_DIR / f"{lang}.json"
