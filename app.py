@@ -124,27 +124,3 @@ tabs = st.tabs([
 if df_periodo.empty:
     st.info(t("No hay registros disponibles en este periodo."))
     st.stop()
-
-with tabs[0]: 
-    generar_resumen_periodo(df_periodo)
-with tabs[1]: 
-    st.dataframe(clean_df(df_periodo), hide_index=True)
-with tabs[2]:
-
-    jugadoras_disponibles_df = filtrar_jugadoras_ausentes(jug_df, ausencias_df)
-    pendientes_in, pendientes_out = get_pendientes_check(df_periodo, jugadoras_disponibles_df)
-
-    col1, col2 = st.columns(2)
-    with col1:
-        st.markdown(t(":material/login: **Sin Check-In**"))
-        if pendientes_in.empty:
-            st.success(t(":material/check_circle: Todas las jugadoras han realizado el check-in."))
-        else:
-            st.dataframe(pendientes_in, hide_index=True)
-
-    with col2:
-        st.markdown(t(":material/logout: **Sin Check-Out**"))
-        if pendientes_out.empty:
-            st.success(t(":material/check_circle: Todas las jugadoras han realizado el check-out."))
-        else:
-            st.dataframe(pendientes_out, hide_index=True)
