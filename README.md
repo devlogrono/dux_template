@@ -39,7 +39,7 @@ streamlit run app.py
   "id_jugadora": "...",
   "nombre": "...",
   "fecha_hora": "YYYY-MM-DDTHH:MM:SS",
-  "tipo": "checkIn|checkOut",
+  "tipo": "tipo",
   "turno": "Turno 1|Turno 2|Turno 3",
   "periodizacion_tactica": "-6..+6",
   "recuperacion": int,
@@ -63,8 +63,6 @@ Si ya existe un registro para esa combinación, al guardar se actualiza en lugar
 ## Validaciones
 
 - Jugadora obligatoria.
-- Check-in: escalas 1–5 (recuperación, fatiga, sueño, estrés, dolor). Si dolor > 1, seleccionar al menos una parte del cuerpo.
-- Check-out: minutos > 0, RPE 1–10. Se calcula automáticamente UA = RPE × minutos.
 
 ## Auth
 
