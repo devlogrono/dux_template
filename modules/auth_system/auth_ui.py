@@ -60,5 +60,13 @@ def menu():
         if st.session_state["auth"]["rol"].lower() in ["developer"]:
             st.page_link("pages/developer.py", label=t("Developer"), icon=":material/user_attributes:")
 
+        if st.session_state["auth"]["rol"].lower() in ["developer"]:
+            if st.button(t("Limpiar cache & reiniciar"), type="tertiary", icon=":material/refresh:"):
+                    st.cache_data.clear()
+                    st.cache_resource.clear()
+
+                    st.success("Cache cleared successfully.")
+                    st.rerun()
+                    
         if st.button(t("Cerrar Sesión"), type="tertiary", icon=":material/logout:"):
             logout()
