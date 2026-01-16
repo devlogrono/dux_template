@@ -2,7 +2,7 @@ from modules.ui.check_in_ui import validate_checkin
 from modules.ui.check_out_ui import validate_checkout
 
 # ==============================
-# ✅ TESTS CHECK-IN (validate_checkin)
+# ✅ TESTS
 # ==============================
 
 def test_checkin_valido_ok():
