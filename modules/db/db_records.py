@@ -81,7 +81,7 @@ def get_records_db(as_df: bool = True):
         df = df[df["usuario"] != "developer"]
 
     # Columna nombre_jugadora
-    df.insert(2, "nombre_jugadora", (df["nombre"] + " " + df["apellido"]).str.strip())
+    df.insert(2, "nombre_jugadora", (df["nombre"] + " " + df["apellido"]).str.strip().str.upper())
 
     df = df.drop(columns=["nombre", "apellido"], errors="ignore")
     
